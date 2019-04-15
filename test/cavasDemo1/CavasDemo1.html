@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Cavas 演示</title>
+
+    <!-- JQuery CDN-->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /**获取 cavas Dom 对象*/
+            var canvasObj = document.getElementById("myCanvas");
+            /**获取 context 对象，该对象提供了用于在画布上绘图的方法和属性
+             * 2d 是目前支持的二维图像*/
+            var ctx = canvasObj.getContext("2d");
+            /**绘制一个红色的矩形*/
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 150, 75);
+        });
+    </script>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    浏览器不支持 HTML5 canvas
+</canvas>
+
+</body>
+</html>
